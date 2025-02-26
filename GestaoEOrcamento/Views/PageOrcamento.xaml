@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GestaoEOrcamento.PageOrcamento"
+             Title="Orçamento"
+             BackgroundColor="#fadadd">
+    <StackLayout>
+        <Label 
+            Text="Bem-Vinda!"
+            TextColor="#726e6e"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" 
+            Margin="10"
+            FontSize="Large"
+            FontAttributes="Bold"/>
+        <Frame BorderColor="#726e6e" BackgroundColor="Transparent" Margin="10" CornerRadius="10">
+            <StackLayout>
+                <Label Text="Realizar Orçamento:"
+                       TextColor="#726e6e"
+                       VerticalOptions="Center"
+                       HorizontalOptions="Center"
+                       Margin="15"
+                       FontSize="Title"/>
+            </StackLayout>
+        </Frame>
+
+    </StackLayout>
+
+</ContentPage>
