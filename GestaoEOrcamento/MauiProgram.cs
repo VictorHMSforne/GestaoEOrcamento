@@ -1,7 +1,10 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using CommunityToolkit.Maui;
+using Microsoft.Extensions.Logging;
 
 namespace GestaoEOrcamento
 {
+    using CommunityToolkit.Maui;
+
     public static class MauiProgram
     {
         public static MauiApp CreateMauiApp()
@@ -9,15 +12,19 @@ namespace GestaoEOrcamento
             var builder = MauiApp.CreateBuilder();
             builder
                 .UseMauiApp<App>()
+                // Initialize the .NET MAUI Community Toolkit by adding the below line of code
+                .UseMauiCommunityToolkit()
+                // After initializing the .NET MAUI Community Toolkit, optionally add additional fonts
                 .ConfigureFonts(fonts =>
                 {
                     fonts.AddFont("OpenSans-Regular.ttf", "OpenSansRegular");
                     fonts.AddFont("OpenSans-Semibold.ttf", "OpenSansSemibold");
+                    fonts.AddFont("Poppins-Bold.ttf", "PoppinsBold");
+                    fonts.AddFont("Poppins-SemiBold.ttf", "SemiBold");
+                    fonts.AddFont("Poppins-Regular.ttf", "Regular");
                 });
 
-#if DEBUG
-    		builder.Logging.AddDebug();
-#endif
+            // Continue initializing your .NET MAUI App here
 
             return builder.Build();
         }

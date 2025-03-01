@@ -2,27 +2,116 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="GestaoEOrcamento.PageOrcamento"
+             xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
              Title="Orçamento"
-             BackgroundColor="#fadadd">
-    <StackLayout>
-        <Label 
+             BackgroundColor="#F2BABA">
+    <ContentPage.Behaviors>
+        <toolkit:StatusBarBehavior StatusBarColor="#FFFFFF" StatusBarStyle="DarkContent" />
+    </ContentPage.Behaviors>
+    
+    <StackLayout >
+
+        <Frame BackgroundColor="#FFFFFF"
+               CornerRadius="53"
+               Padding="20"
+               HasShadow="True"
+               HeightRequest="232"
+               WidthRequest="410"
+               TranslationY="-26"
+               BorderColor="Transparent">
+            <Frame.Shadow>
+                <Shadow Brush="#000000"
+                Radius="53"
+                Opacity="0.05"
+                Offset="1,10"/>
+            </Frame.Shadow>
+            <Label Text="Bem-Vinda" TextColor="#F2BABA" FontFamily="PoppinsBold" FontSize="32" HorizontalOptions="CenterAndExpand" HorizontalTextAlignment="Center" TranslationY="30"/>
+        </Frame>
+        <StackLayout>
+            <!--<Frame BackgroundColor="#F8E5E7"
+                   CornerRadius="53"
+                   Padding="20"
+                   HasShadow="True"
+                   HeightRequest="580"
+                   WidthRequest="349"
+                   TranslationY="-110"
+                   BorderColor="Transparent"
+                   Margin="10">
+                <Frame.Shadow>
+                    <Shadow Brush="#000000"
+                            Radius="-10"
+                            Opacity="0.05"
+                            Offset="10,10" />
+                </Frame.Shadow>
+            </Frame>-->
+            <Border BackgroundColor="#F8E5E7"
+                    HeightRequest="580"
+                    WidthRequest="349"
+                    TranslationY="-110"
+                    Margin="10"
+                    Padding="20"
+                    Stroke="Transparent">
+                <Border.StrokeShape>
+                    <RoundRectangle CornerRadius="53,53,53,53"/>
+                </Border.StrokeShape>
+                <Border.Shadow>
+                    <Shadow Brush="Black"
+                            Radius="400" 
+                            Offset="8,15"
+                            Opacity="0.09"/>
+                </Border.Shadow>
+            </Border>
+
+
+        </StackLayout>
+       
+
+
+
+
+
+        <!--<Label 
             Text="Bem-Vinda!"
             TextColor="#726e6e"
             VerticalOptions="Center" 
             HorizontalOptions="Center" 
-            Margin="10"
-            FontSize="Large"
+            Margin="0,15,0,0"
+            FontSize="23"
             FontAttributes="Bold"/>
-        <Frame BorderColor="#726e6e" BackgroundColor="Transparent" Margin="10" CornerRadius="10">
+        <Frame BorderColor="#726e6e" BackgroundColor="#fadadd"  Margin="15" CornerRadius="40" HeightRequest="630" HasShadow="True" >
             <StackLayout>
-                <Label Text="Realizar Orçamento:"
+                <Label Text="Realizar Orçamento"
                        TextColor="#726e6e"
                        VerticalOptions="Center"
                        HorizontalOptions="Center"
                        Margin="15"
                        FontSize="Title"/>
+                <BoxView BackgroundColor="#726e6e" HeightRequest="0.8" CornerRadius="10"/>
+                <Grid >
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label Text="Nome do Produto :" TextColor="#726e6e" FontAttributes="Bold" VerticalTextAlignment="Center" FontSize="23" Grid.Row="0" Grid.Column="0" />
+                    <Entry  FontSize="20" HorizontalOptions="FillAndExpand" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2"/>
+                    <Label Text="Preço Base : " TextColor="#726e6e" FontAttributes="Bold" VerticalTextAlignment="Center" FontSize="19.27" Grid.Row="1" Grid.Column="0"/>
+                    <Entry Grid.Row="1" Grid.Column="1" HorizontalOptions="FillAndExpand" />
+                    <Label Text="Materiais Usados : " TextColor="#726e6e" FontAttributes="Bold" VerticalTextAlignment="Center" FontSize="19.27" Grid.Row="2" Grid.Column="0"/>
+                    <Label Text="Inusmos de Trabalho : " TextColor="#726e6e" FontAttributes="Bold" VerticalTextAlignment="Center" FontSize="18" Grid.Row="3" Grid.Column="0"/>
+                    <Label Text="Horas Trabalhadas : " TextColor="#726e6e" FontAttributes="Bold" VerticalTextAlignment="Center" FontSize="19.27" Grid.Row="4" Grid.Column="0"/>
+                    <Label Text="Nome do Cliente :" TextColor="#726e6e" FontAttributes="Bold" VerticalTextAlignment="Center" FontSize="23" Grid.Row="0"  Grid.Column="0" />
+                </Grid>
+                
             </StackLayout>
-        </Frame>
+        </Frame>-->
 
     </StackLayout>
 
