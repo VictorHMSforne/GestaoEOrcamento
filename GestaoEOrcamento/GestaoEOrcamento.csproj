@@ -66,6 +66,7 @@
 	  <None Remove="Resources\Images\Android Compact - 2.png" />
 	  <None Remove="Resources\Images\AppGestao&amp;Orcamento.png" />
 	  <None Remove="Resources\Images\go.png" />
+	  <None Remove="Resources\Images\ProgramaDaMamis.drawio" />
 	  <None Remove="Resources\Images\splash.png" />
 	  <None Remove="Resources\Images\splash.svg" />
 	  <None Remove="Resources\Splash\splash.svg" />
